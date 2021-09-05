@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="TestNG Hooks 01">
+        <classes>
+            <class name="tests.testng.TestNGHooks"/>
+            <class name="tests.testng.TestNGHooks02"/>
+        </classes>
+    </test>
+
+<!--    <test name="TestNG Hooks 02">-->
+<!--        <classes>-->
+<!--            <class name="tests.testng.TestNGHooks02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

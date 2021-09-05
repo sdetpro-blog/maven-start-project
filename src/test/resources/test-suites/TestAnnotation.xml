@@ -6,9 +6,9 @@
             <class name="tests.testng.TestAnnotation"/>
         </classes>
     </test>
-    <test name="Another one">
-        <classes>
-            <class name="tests.testng.TestAnotherAnnotation"/>
-        </classes>
-    </test>
+<!--    <test name="Another one">-->
+<!--        <classes>-->
+<!--            <class name="tests.testng.TestAnotherAnnotation"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
