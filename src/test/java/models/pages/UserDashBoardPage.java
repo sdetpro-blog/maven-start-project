@@ -14,6 +14,10 @@ public class UserDashBoardPage extends ActionBase {
         this.driver = driver;
     }
 
+    public String getTitle(){
+        return getText().from(titleSel);
+    }
+
     public void verifyUserOnDashBoardPage(){
         final String expectedTitle = "Secure Area";
         String currentTitle = getText().from(titleSel);

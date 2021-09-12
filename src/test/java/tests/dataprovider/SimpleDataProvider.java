@@ -5,7 +5,10 @@ import models.pages.TheInternetAuthenticationPage;
 import models.pages.UserDashBoardPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
+
+import java.sql.Driver;
 
 public class SimpleDataProvider {
 
@@ -26,6 +29,41 @@ public class SimpleDataProvider {
         } finally {
             driver.quit();
         }
+    }
+
+    @Test
+    public void openBrowser(){
+        WebDriver driver = DriverFactory.getChromeDriver();
+        TheInternetAuthenticationPage loginPage = new TheInternetAuthenticationPage(driver);
+        driver.get("https://the-internet.herokuapp.com/login");
+        loginPage.inputUsername("username").inputPassword("password").clickLoginBtn();
+        driver.quit();
+    }
+
+    @Test
+    public void openBrowser_(){
+        WebDriver driver = DriverFactory.getChromeDriver();
+        TheInternetAuthenticationPage loginPage = new TheInternetAuthenticationPage(driver);
+        driver.get("https://the-internet.herokuapp.com/login");
+        loginPage.inputUsername("username").inputPassword("password").clickLoginBtn();
+        driver.quit();
+    }
+
+    // TODO: Ignore by JIRA-123 | flaky test
+    @Ignore
+    @Test
+    public void ignoredTest() {
+        System.out.println("ignoredTest");
+    }
+
+    @Test(groups = {"smoke"})
+    public void checkGeneralUI() {
+        System.out.println("checkGeneralUI - Smoke Test");
+    }
+
+    @Test(groups = {"regression", "smoke"})
+    public void loginWithCorrectCreds() {
+        System.out.println("loginWithCorrectCreds - function test");
     }
 
     @DataProvider(name = "loginCredsQaEnv")

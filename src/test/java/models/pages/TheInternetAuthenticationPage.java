@@ -4,6 +4,7 @@ import core.element.ActionBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 public class TheInternetAuthenticationPage extends ActionBase {
 
@@ -32,12 +33,33 @@ public class TheInternetAuthenticationPage extends ActionBase {
         clickOn(loginBtn);
     }
 
+    public String getErrMsgBannerColor(){
+        return driver.findElement(errMsgBanner).getCssValue("background-color");
+    }
+
+    public String getErrMsg(){
+        return driver.findElement(errMsgBanner).getText();
+    }
+
+
     public void verifyLoginErrMsg() {
+        SoftAssert softAssert = new SoftAssert();
+
         String errMsgBannerColor = getCSS("background-color").from(errMsgBanner);
-        checkThat(errMsgBannerColor).is("rgba(198, 15, 19, 1)").ifNot("[ERR] Err msg is not rgba(198, 15, 19, 1)");
+//        checkThat(errMsgBannerColor).is("rgba(198, 15, 19, 2)").ifNot("[ERR] Err msg is not rgba(198, 15, 19, 1)");
+        softAssert.assertEquals(errMsgBannerColor, "rgba(198, 15, 19, 1)", "[ERR] Err msg is not rgba(198, 15, 19, 1)");
+
 
         // Get flash msg
         String errMsgText = getText().from(errMsgBanner);
-        checkThat(errMsgText).contains("is invalid").ifNot("[ERR] Err msg incorrect!");
+//        checkThat(errMsgText).contains("is invalid").ifNot("[ERR] Err msg incorrect!");
+        softAssert.assertTrue(errMsgText.contains("is invalid"), "[ERR] Err msg incorrect!");
+
+        softAssert.assertAll();
+
+
+        System.out.println("GOING HERE");
+
     }
+
 }
