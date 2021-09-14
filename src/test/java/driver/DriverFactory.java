@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.concurrent.TimeUnit;
+
 public class DriverFactory {
 
     public static WebDriver getChromeDriver(){
@@ -21,7 +23,8 @@ public class DriverFactory {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--incognito");
-
-        return new ChromeDriver(chromeOptions);
+        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        return driver;
     }
 }
