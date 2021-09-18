@@ -1,7 +1,6 @@
-package testflows.buying;
+package testflows.order;
 
 import org.openqa.selenium.WebDriver;
-import testflows.authentication.LoginFlow;
 
 public class BuyingFlow {
 

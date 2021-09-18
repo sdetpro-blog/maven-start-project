@@ -1,11 +1,11 @@
-package tests.buying;
+package tests.purchasing;
 
 import driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import testflows.authentication.LoginFlow;
-import testflows.buying.BuyingFlow;
+import testflows.order.BuyingFlow;
 
 public class Buying {
 
