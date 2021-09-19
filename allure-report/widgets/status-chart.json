@@ -1,0 +1,31 @@
+[ {
+  "uid" : "410b65971f17bd30",
+  "name" : "testBuildingCheapComputer",
+  "time" : {
+    "start" : 1632059203037,
+    "stop" : 1632059208496,
+    "duration" : 5459
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "aa09758159498291",
+  "name" : "testBuildingCheapComputer",
+  "time" : {
+    "start" : 1632059195545,
+    "stop" : 1632059202875,
+    "duration" : 7330
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "57f6681cf25eb508",
+  "name" : "testBuildingCheapComputer",
+  "time" : {
+    "start" : 1632059208502,
+    "stop" : 1632059214121,
+    "duration" : 5619
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

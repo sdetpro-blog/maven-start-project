@@ -1,0 +1,95 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Tus-MacBook-Pro.attlocal.net",
+    "children" : [ {
+      "name" : "98734@Tus-MacBook-Pro.attlocal.net.main(1)",
+      "children" : [ {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "410b65971f17bd30",
+        "parentUid" : "8d7e55d85ee2d6dfbdb8e69eff60de01",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059203037,
+          "stop" : 1632059208496,
+          "duration" : 5459
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "aa09758159498291",
+        "parentUid" : "8d7e55d85ee2d6dfbdb8e69eff60de01",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059195545,
+          "stop" : 1632059202875,
+          "duration" : 7330
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "57f6681cf25eb508",
+        "parentUid" : "8d7e55d85ee2d6dfbdb8e69eff60de01",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059208502,
+          "stop" : 1632059214121,
+          "duration" : 5619
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
+      } ],
+      "uid" : "8d7e55d85ee2d6dfbdb8e69eff60de01"
+    }, {
+      "name" : "98439@Tus-MacBook-Pro.attlocal.net.main(1)",
+      "children" : [ {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "6893e043f2ee7b04",
+        "parentUid" : "81dfea0276f2d9744a2b54386a1ac53a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1632058958739,
+          "stop" : 1632058964489,
+          "duration" : 5750
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "2c98991297558aa",
+        "parentUid" : "81dfea0276f2d9744a2b54386a1ac53a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1632058953230,
+          "stop" : 1632058958733,
+          "duration" : 5503
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "147d73bac401e146",
+        "parentUid" : "81dfea0276f2d9744a2b54386a1ac53a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1632058945467,
+          "stop" : 1632058953073,
+          "duration" : 7606
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
+      } ],
+      "uid" : "81dfea0276f2d9744a2b54386a1ac53a"
+    } ],
+    "uid" : "6e6262681dad6b738fb472b3cf3dad63"
+  } ],
+  "name" : "timeline"
+}

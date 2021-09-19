@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Sep 19 08:46:43 CDT 2021","Sun Sep 19 08:46:48 CDT 2021","5459","Default Suite","sdetpro-k1-basic-selenium","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""
+"failed","Sun Sep 19 08:46:35 CDT 2021","Sun Sep 19 08:46:42 CDT 2021","7330","Default Suite","sdetpro-k1-basic-selenium","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""
+"failed","Sun Sep 19 08:46:48 CDT 2021","Sun Sep 19 08:46:54 CDT 2021","5619","Default Suite","sdetpro-k1-basic-selenium","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""

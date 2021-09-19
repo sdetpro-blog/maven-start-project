@@ -1,5 +1,7 @@
 package testdata.purchasing;
 
+import com.google.gson.Gson;
+
 public class CheapComputer {
 
     private String processorType;
@@ -46,6 +48,17 @@ public class CheapComputer {
 
     public void setSoftware(String software) {
         this.software = software;
+    }
+
+    @Override
+    public String toString() {
+        return "CheapComputer{" +
+                "processorType='" + processorType + '\'' +
+                ", ram='" + ram + '\'' +
+                ", hdd='" + hdd + '\'' +
+                ", os='" + os + '\'' +
+                ", software='" + software + '\'' +
+                '}';
     }
 
 }

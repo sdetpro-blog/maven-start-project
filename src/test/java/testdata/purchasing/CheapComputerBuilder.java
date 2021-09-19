@@ -70,11 +70,4 @@ public class CheapComputerBuilder {
         }
     }
 
-    public static void main(String[] args) {
-        CheapComputerBuilder.Builder builder = new CheapComputerBuilder.Builder();
-        builder.hdd(HDD_320GB);
-        builder.hdd(PROCESSOR_FAST);
-        CheapComputerBuilder pc = builder.build();
-        System.out.println(pc.hdd());
-    }
 }

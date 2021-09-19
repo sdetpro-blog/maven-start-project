@@ -1,0 +1,44 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "testBuildingCheapComputer",
+    "uid" : "aa09758159498291",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1632059195545,
+      "stop" : 1632059202875,
+      "duration" : 7330
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
+  }, {
+    "name" : "testBuildingCheapComputer",
+    "uid" : "410b65971f17bd30",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1632059203037,
+      "stop" : 1632059208496,
+      "duration" : 5459
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}" ]
+  }, {
+    "name" : "testBuildingCheapComputer",
+    "uid" : "57f6681cf25eb508",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1632059208502,
+      "stop" : 1632059214121,
+      "duration" : 5619
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
+  } ],
+  "name" : "behaviors"
+}

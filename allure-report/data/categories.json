@@ -1,0 +1,52 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "children" : [ {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "aa09758159498291",
+        "parentUid" : "7c004ead4df95175fec6b5952657177d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059195545,
+          "stop" : 1632059202875,
+          "duration" : 7330
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "410b65971f17bd30",
+        "parentUid" : "7c004ead4df95175fec6b5952657177d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059203037,
+          "stop" : 1632059208496,
+          "duration" : 5459
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}" ]
+      }, {
+        "name" : "testBuildingCheapComputer",
+        "uid" : "57f6681cf25eb508",
+        "parentUid" : "7c004ead4df95175fec6b5952657177d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1632059208502,
+          "stop" : 1632059214121,
+          "duration" : 5619
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
+      } ],
+      "uid" : "7c004ead4df95175fec6b5952657177d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

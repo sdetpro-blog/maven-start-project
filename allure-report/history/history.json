@@ -1,0 +1,62 @@
+{
+  "3e3e0a396ff7ee069f8a57eb5f877036" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aa09758159498291",
+      "status" : "failed",
+      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "time" : {
+        "start" : 1632059195545,
+        "stop" : 1632059202875,
+        "duration" : 7330
+      }
+    } ]
+  },
+  "5847e591fde850a9dc6c2c0396c44230" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "57f6681cf25eb508",
+      "status" : "failed",
+      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "time" : {
+        "start" : 1632059208502,
+        "stop" : 1632059214121,
+        "duration" : 5619
+      }
+    } ]
+  },
+  "6fe82995fb70ba62d3561520ae73f058" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "410b65971f17bd30",
+      "status" : "failed",
+      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "time" : {
+        "start" : 1632059203037,
+        "stop" : 1632059208496,
+        "duration" : 5459
+      }
+    } ]
+  }
+}
