@@ -1,7 +1,5 @@
 package testflows.order.computer;
 
-import com.sun.javaws.exceptions.ErrorCodeResponseException;
-import models.components.cart.ShoppingCartItemComponent;
 import models.pages.ComputerItemDetailsPage;
 import models.pages.ShoppingCartPage;
 import org.openqa.selenium.WebDriver;

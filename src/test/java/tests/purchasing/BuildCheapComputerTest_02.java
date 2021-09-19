@@ -5,13 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import testdata.purchasing.CheapComputer;
+import testdata.purchasing.ComputerSpec;
 import testflows.order.computer.OrderingComputerFlow;
 import utils.data.ComputerTestDataGenerator;
 
 public class BuildCheapComputerTest_02 {
 
+    private CheapComputer referenceCompData;
+
     @Test(dataProvider = "cheapCompsDataSet")
     public void testBuildingCheapComputer(CheapComputer computerDataObject) {
+        if(referenceCompData == null && computerDataObject.getRam().equals(ComputerSpec.RAM_8GB.value())){
+            referenceCompData = computerDataObject;
+        }
         WebDriver driver = DriverFactory.getChromeDriver();
         try {
             OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
@@ -26,6 +32,11 @@ public class BuildCheapComputerTest_02 {
         } finally {
             driver.quit();
         }
+    }
+
+    @Test(dependsOnMethods = "testBuildingCheapComputer")
+    public void testBuildingCheapComputer_02() {
+        System.out.println("2ND TEST: " + referenceCompData.getRam());
     }
 
     @DataProvider()
