@@ -1,5 +1,5 @@
 {
-  "uid" : "147d73bac401e146",
+  "uid" : "f0d242545d2ff0c2",
   "name" : "testBuildingCheapComputer",
   "fullName" : "tests.purchasing.BuildCheapComputerTest_02.testBuildingCheapComputer",
   "historyId" : "3e3e0a396ff7ee069f8a57eb5f877036",
@@ -58,6 +58,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "147d73bac401e146.json",
+  "source" : "f0d242545d2ff0c2.json",
   "parameterValues" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
 }

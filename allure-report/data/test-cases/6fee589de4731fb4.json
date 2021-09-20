@@ -1,5 +1,5 @@
 {
-  "uid" : "aa09758159498291",
+  "uid" : "6fee589de4731fb4",
   "name" : "testBuildingCheapComputer",
   "fullName" : "tests.purchasing.BuildCheapComputerTest_02.testBuildingCheapComputer",
   "historyId" : "3e3e0a396ff7ee069f8a57eb5f877036",
@@ -54,26 +54,12 @@
     "value" : "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "147d73bac401e146",
-      "status" : "passed",
-      "time" : {
-        "start" : 1632058945467,
-        "stop" : 1632058953073,
-        "duration" : 7606
-      }
-    } ],
-    "categories" : [ {
-      "name" : "Product defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "aa09758159498291.json",
+  "source" : "6fee589de4731fb4.json",
   "parameterValues" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
 }

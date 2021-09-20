@@ -1,12 +1,12 @@
 {
-  "uid" : "2c98991297558aa",
+  "uid" : "979967e392afb28",
   "name" : "testBuildingCheapComputer",
   "fullName" : "tests.purchasing.BuildCheapComputerTest_02.testBuildingCheapComputer",
-  "historyId" : "6fe82995fb70ba62d3561520ae73f058",
+  "historyId" : "5847e591fde850a9dc6c2c0396c44230",
   "time" : {
-    "start" : 1632058953230,
-    "stop" : 1632058958733,
-    "duration" : 5503
+    "start" : 1632061532454,
+    "stop" : 1632061537666,
+    "duration" : 5212
   },
   "status" : "passed",
   "flaky" : false,
@@ -24,10 +24,10 @@
     "value" : "testBuildingCheapComputer"
   }, {
     "name" : "parentSuite",
-    "value" : "Default Suite"
+    "value" : "Test Data"
   }, {
     "name" : "suite",
-    "value" : "sdetpro-k1-basic-selenium"
+    "value" : "TestNG"
   }, {
     "name" : "subSuite",
     "value" : "tests.purchasing.BuildCheapComputerTest_02"
@@ -36,7 +36,7 @@
     "value" : "Tus-MacBook-Pro.attlocal.net"
   }, {
     "name" : "thread",
-    "value" : "98439@Tus-MacBook-Pro.attlocal.net.main(1)"
+    "value" : "99942@Tus-MacBook-Pro.attlocal.net.main(1)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -49,7 +49,7 @@
   } ],
   "parameters" : [ {
     "name" : "arg0",
-    "value" : "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}"
+    "value" : "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}"
   } ],
   "links" : [ ],
   "hidden" : true,
@@ -58,6 +58,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "2c98991297558aa.json",
-  "parameterValues" : [ "CheapComputer{processorType='Fast', ram='4 GB', hdd='400 GB', os='null', software='null'}" ]
+  "source" : "979967e392afb28.json",
+  "parameterValues" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
 }

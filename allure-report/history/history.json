@@ -1,61 +1,77 @@
 {
   "3e3e0a396ff7ee069f8a57eb5f877036" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "aa09758159498291",
-      "status" : "failed",
-      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "uid" : "5c5a7eea8a44ed8",
+      "status" : "passed",
       "time" : {
-        "start" : 1632059195545,
-        "stop" : 1632059202875,
-        "duration" : 7330
+        "start" : 1632092046858,
+        "stop" : 1632092055804,
+        "duration" : 8946
       }
     } ]
   },
   "5847e591fde850a9dc6c2c0396c44230" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "57f6681cf25eb508",
-      "status" : "failed",
-      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "uid" : "5a1f61e006427bd4",
+      "status" : "passed",
       "time" : {
-        "start" : 1632059208502,
-        "stop" : 1632059214121,
-        "duration" : 5619
+        "start" : 1632092063093,
+        "stop" : 1632092068421,
+        "duration" : 5328
+      }
+    } ]
+  },
+  "14a9a9cb3adef98f775fc49dffa7d310" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e38befcda51dd3eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632092068461,
+        "stop" : 1632092068463,
+        "duration" : 2
       }
     } ]
   },
   "6fe82995fb70ba62d3561520ae73f058" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "410b65971f17bd30",
-      "status" : "failed",
-      "statusDetails" : "[ERR] Total price is not correct! expected [true] but found [false]",
+      "uid" : "bcc90215e0cbfaae",
+      "status" : "passed",
       "time" : {
-        "start" : 1632059203037,
-        "stop" : 1632059208496,
-        "duration" : 5459
+        "start" : 1632092056265,
+        "stop" : 1632092063068,
+        "duration" : 6803
       }
     } ]
   }

@@ -1,0 +1,63 @@
+{
+  "uid" : "8c3caa285de918e5",
+  "name" : "testBuildingCheapComputer",
+  "fullName" : "tests.purchasing.BuildCheapComputerTest_02.testBuildingCheapComputer",
+  "historyId" : "3e3e0a396ff7ee069f8a57eb5f877036",
+  "time" : {
+    "start" : 1632060262228,
+    "stop" : 1632060268284,
+    "duration" : 6056
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.purchasing.BuildCheapComputerTest_02"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.purchasing.BuildCheapComputerTest_02"
+  }, {
+    "name" : "testMethod",
+    "value" : "testBuildingCheapComputer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "sdetpro-k1-basic-selenium"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.purchasing.BuildCheapComputerTest_02"
+  }, {
+    "name" : "host",
+    "value" : "Tus-MacBook-Pro.attlocal.net"
+  }, {
+    "name" : "thread",
+    "value" : "99131@Tus-MacBook-Pro.attlocal.net.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8c3caa285de918e5.json",
+  "parameterValues" : [ "CheapComputer{processorType='Fast', ram='8 GB', hdd='400 GB', os='null', software='null'}" ]
+}

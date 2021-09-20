@@ -2,6 +2,7 @@ package models.components.product;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import testdata.purchasing.ComputerSpec;
 
 public class ComputerEssentialComponent extends ProductEssentialComponent {
 
@@ -29,7 +30,8 @@ public class ComputerEssentialComponent extends ProductEssentialComponent {
     }
 
     private void selectCompSpecOption(String option){
-        String selectorString = "//label[contains(text(), \"" + option + "\")]";
+        String optionValue =  ComputerSpec.valueOf(option).value();
+        String selectorString = "//label[contains(text(), \"" + optionValue + "\")]";
         By optionSel = By.xpath(selectorString);
         driver.findElement(optionSel).click();
     }

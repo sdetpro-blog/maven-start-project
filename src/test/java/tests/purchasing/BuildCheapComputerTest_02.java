@@ -2,6 +2,7 @@ package tests.purchasing;
 
 import driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import testdata.purchasing.CheapComputer;
@@ -15,7 +16,8 @@ public class BuildCheapComputerTest_02 {
 
     @Test(dataProvider = "cheapCompsDataSet")
     public void testBuildingCheapComputer(CheapComputer computerDataObject) {
-        if(referenceCompData == null && computerDataObject.getRam().equals(ComputerSpec.RAM_8GB.value())){
+        // Get the data as RAM_8GB to reuse from a question from a question in class
+        if(referenceCompData == null && computerDataObject.getRam().equals(ComputerSpec.valueOf("RAM_8GB").name())){
             referenceCompData = computerDataObject;
         }
         WebDriver driver = DriverFactory.getChromeDriver();
@@ -36,7 +38,11 @@ public class BuildCheapComputerTest_02 {
 
     @Test(dependsOnMethods = "testBuildingCheapComputer")
     public void testBuildingCheapComputer_02() {
-        System.out.println("2ND TEST: " + referenceCompData.getRam());
+        if(referenceCompData !=null){
+            System.out.println("2ND TEST: " + referenceCompData.getRam());
+        } else {
+            Assert.fail("Test data is not ready!!");
+        }
     }
 
     @DataProvider()

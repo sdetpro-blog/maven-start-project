@@ -1,12 +1,12 @@
 {
-  "uid" : "6893e043f2ee7b04",
+  "uid" : "aa0a773abb8ff0f7",
   "name" : "testBuildingCheapComputer",
   "fullName" : "tests.purchasing.BuildCheapComputerTest_02.testBuildingCheapComputer",
   "historyId" : "5847e591fde850a9dc6c2c0396c44230",
   "time" : {
-    "start" : 1632058958739,
-    "stop" : 1632058964489,
-    "duration" : 5750
+    "start" : 1632060274222,
+    "stop" : 1632060279749,
+    "duration" : 5527
   },
   "status" : "passed",
   "flaky" : false,
@@ -36,7 +36,7 @@
     "value" : "Tus-MacBook-Pro.attlocal.net"
   }, {
     "name" : "thread",
-    "value" : "98439@Tus-MacBook-Pro.attlocal.net.main(1)"
+    "value" : "99131@Tus-MacBook-Pro.attlocal.net.main(1)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -58,6 +58,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "6893e043f2ee7b04.json",
+  "source" : "aa0a773abb8ff0f7.json",
   "parameterValues" : [ "CheapComputer{processorType='Fast', ram='2 GB', hdd='400 GB', os='null', software='null'}" ]
 }

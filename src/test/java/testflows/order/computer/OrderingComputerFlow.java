@@ -41,20 +41,9 @@ public class OrderingComputerFlow {
 
         // Get additional fee
         double additionalFees = 0.0;
-        if(simpleComputer.getProcessorType().equals(ComputerSpec.PROCESSOR_FAST.value()))
-            additionalFees += ComputerSpec.PROCESSOR_FAST.additionPrice();
-        if(simpleComputer.getProcessorType().equals(ComputerSpec.PROCESSOR_MEDIUM.value()))
-            additionalFees += ComputerSpec.PROCESSOR_MEDIUM.additionPrice();
-
-        if(simpleComputer.getRam().equals(ComputerSpec.RAM_4GB.value()))
-            additionalFees += ComputerSpec.RAM_4GB.additionPrice();
-        if(simpleComputer.getRam().equals(ComputerSpec.RAM_8GB.value()))
-            additionalFees += ComputerSpec.RAM_8GB.additionPrice();
-
-        if(simpleComputer.getHdd().equals(ComputerSpec.HDD_320GB.value()))
-            additionalFees += ComputerSpec.HDD_320GB.additionPrice();
-        if(simpleComputer.getHdd().equals(ComputerSpec.HDD_400GB.value()))
-            additionalFees += ComputerSpec.HDD_400GB.additionPrice();
+        additionalFees += ComputerSpec.valueOf(simpleComputer.getProcessorType()).additionPrice();
+        additionalFees += ComputerSpec.valueOf(simpleComputer.getRam()).additionPrice();
+        additionalFees += ComputerSpec.valueOf(simpleComputer.getHdd()).additionPrice();
 
         // Get Total current price for computer
         double currentCompPrice = fixedPrice + additionalFees;
