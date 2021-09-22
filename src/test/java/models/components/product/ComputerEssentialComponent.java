@@ -4,22 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import testdata.purchasing.ComputerSpec;
 
-public class ComputerEssentialComponent extends ProductEssentialComponent {
+public abstract class ComputerEssentialComponent {
 
     private final WebDriver driver;
+    private final By addToCartBtnSel = By.cssSelector("[id^='add-to-cart-button']");
 
     public ComputerEssentialComponent(WebDriver driver) {
-        super(driver);
         this.driver = driver;
     }
 
-    public void selectProcessorType(String type) {
-        selectCompSpecOption(type);
-    }
-
-    public void selectRAM(String type) {
-        selectCompSpecOption(type);
-    }
+    public abstract void selectProcessorType(String type);
+    public abstract void selectRAM(String type);
 
     public void selectHDD(String type) {
         selectCompSpecOption(type);
@@ -29,10 +24,15 @@ public class ComputerEssentialComponent extends ProductEssentialComponent {
         selectCompSpecOption(type);
     }
 
-    private void selectCompSpecOption(String option){
+    protected void selectCompSpecOption(String option){
         String optionValue =  ComputerSpec.valueOf(option).value();
         String selectorString = "//label[contains(text(), \"" + optionValue + "\")]";
         By optionSel = By.xpath(selectorString);
         driver.findElement(optionSel).click();
     }
+
+    public void clickOnAddToCartBtn(){
+        driver.findElement(addToCartBtnSel).click();
+    }
+
 }

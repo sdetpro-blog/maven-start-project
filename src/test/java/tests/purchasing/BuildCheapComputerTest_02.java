@@ -26,11 +26,11 @@ public class BuildCheapComputerTest_02 {
 
             // Go to cheap computer item page
             driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
-            orderingComputerFlow.buildSimpleComputer(computerDataObject);
+            orderingComputerFlow.buildCheapComputer(computerDataObject);
 
             // Go to Shopping cart Page
             driver.get("http://demowebshop.tricentis.com/cart");
-            orderingComputerFlow.verifySimpleComputerAdded(computerDataObject);
+            orderingComputerFlow.verifyCheapComputerAdded(computerDataObject);
         } finally {
             driver.quit();
         }

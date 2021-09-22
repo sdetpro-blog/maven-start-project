@@ -1,7 +1,7 @@
 package testflows.order.computer;
 
-import models.pages.ComputerItemDetailsPage;
-import models.pages.ShoppingCartPage;
+import models.pages.computer.CheapComputerItemDetailsPage;
+import models.pages.cart.ShoppingCartPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import testdata.purchasing.CheapComputer;
@@ -15,8 +15,8 @@ public class OrderingComputerFlow {
         this.driver = driver;
     }
 
-    public void buildSimpleComputer(CheapComputer compData) {
-        ComputerItemDetailsPage detailsPage = new ComputerItemDetailsPage(driver);
+    public void buildCheapComputer(CheapComputer compData) {
+        CheapComputerItemDetailsPage detailsPage = new CheapComputerItemDetailsPage(driver);
 
         // Build Comp specs
         detailsPage.computerEssentialComp().selectProcessorType(compData.getProcessorType());
@@ -27,13 +27,13 @@ public class OrderingComputerFlow {
         detailsPage.computerEssentialComp().clickOnAddToCartBtn();
         try {
             detailsPage.waitUntilItemAddedToCart();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new Error("[ERR] Item is not added after 15s!");
         }
 
     }
 
-    public void verifySimpleComputerAdded(CheapComputer simpleComputer){
+    public void verifyCheapComputerAdded(CheapComputer simpleComputer) {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
 
         // Get fixed price for this computer type

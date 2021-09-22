@@ -2,8 +2,8 @@ package tests.purchasing;
 
 import driver.DriverFactory;
 import models.components.cart.ShoppingCartItemComponent;
+import models.components.product.CheapComputerEssentialComponent;
 import models.components.product.ComputerEssentialComponent;
-import models.components.product.ProductEssentialComponent;
 import models.pages.ItemDetailsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -19,12 +19,12 @@ public class BuildCheapComputerTest {
         try {
             driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
 
-            ComputerEssentialComponent specComponent = new ComputerEssentialComponent(driver);
+            CheapComputerEssentialComponent specComponent = new CheapComputerEssentialComponent(driver);
             specComponent.selectProcessorType(ComputerSpec.PROCESSOR_FAST.value());
             specComponent.selectRAM(ComputerSpec.RAM_8GB.value());
             specComponent.selectHDD(ComputerSpec.HDD_400GB.value());
 
-            ProductEssentialComponent productEssentialComponent = new ProductEssentialComponent(driver);
+            ComputerEssentialComponent productEssentialComponent = new CheapComputerEssentialComponent(driver);
             productEssentialComponent.clickOnAddToCartBtn();
 
             ItemDetailsPage itemDetailsPage = new ItemDetailsPage(driver);

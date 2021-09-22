@@ -1,4 +1,4 @@
-package models.pages;
+package models.pages.cart;
 
 import models.components.cart.ShoppingCartItemComponent;
 import org.openqa.selenium.WebDriver;
