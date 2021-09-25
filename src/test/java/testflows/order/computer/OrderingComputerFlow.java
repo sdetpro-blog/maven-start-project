@@ -52,7 +52,7 @@ public class OrderingComputerFlow {
         }
     }
 
-    public void verifyCheapComputerAdded(ComputerDataObject simpleComputer) {
+    public void verifyComputerAdded(ComputerDataObject simpleComputer) {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
 
         // Get fixed price for this computer type

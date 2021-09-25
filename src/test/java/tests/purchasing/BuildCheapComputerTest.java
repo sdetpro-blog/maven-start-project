@@ -22,7 +22,7 @@ public class BuildCheapComputerTest {
 
             // Go to Shopping cart Page
             driver.get("http://demowebshop.tricentis.com/cart");
-            orderingComputerFlow.verifyCheapComputerAdded(computerDataObject);
+            orderingComputerFlow.verifyComputerAdded(computerDataObject);
         } finally {
             driver.quit();
         }
