@@ -1,6 +1,6 @@
 package components.global;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import java.util.List;
 public class HeaderTest {
 
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             testHomePageHeader(driver);
             testCategoryPageHeader(driver);

@@ -1,6 +1,6 @@
 package tests.authentication;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,7 +10,7 @@ public class Login {
 
     @Test(groups = {"regression", "smoke"})
     public void loginWithCorretCreds() {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         final String username = "tomsmith";
         final String password = "SuperSecretPassword!";
         try {
@@ -24,7 +24,7 @@ public class Login {
 
     @Test(groups = {"regression"}, dataProvider = "wrongLoginData")
     public void loginWithIncorrectCreds(String username, String password) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try{
             driver.get("https://the-internet.herokuapp.com/login");
             LoginFlow loginFlow = new LoginFlow(driver);

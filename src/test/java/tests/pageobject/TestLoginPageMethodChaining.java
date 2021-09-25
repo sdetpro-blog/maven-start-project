@@ -1,13 +1,13 @@
 package tests.pageobject;
 
-import driver.DriverFactory;
+import driver.Driver;
 import models.pagesold.LoginPageMethodChaining;
 import org.openqa.selenium.WebDriver;
 
 public class TestLoginPageMethodChaining {
 
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         TestLoginPageMethodChaining testLoginPage = new TestLoginPageMethodChaining();
 
         driver.get("https://the-internet.herokuapp.com/login");

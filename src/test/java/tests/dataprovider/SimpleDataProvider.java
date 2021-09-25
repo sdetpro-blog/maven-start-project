@@ -1,6 +1,6 @@
 package tests.dataprovider;
 
-import driver.DriverFactory;
+import driver.Driver;
 import models.pages.TheInternetAuthenticationPage;
 import models.pages.UserDashBoardPage;
 import org.openqa.selenium.WebDriver;
@@ -8,14 +8,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import java.sql.Driver;
-
 public class SimpleDataProvider {
 
     @Test(dataProvider = "loginCredsQaEnv")
     public void testLogin(String username, String password) {
 
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             TheInternetAuthenticationPage loginPage = new TheInternetAuthenticationPage(driver);
             driver.get("https://the-internet.herokuapp.com/login");
@@ -33,7 +31,7 @@ public class SimpleDataProvider {
 
     @Test
     public void openBrowser(){
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         TheInternetAuthenticationPage loginPage = new TheInternetAuthenticationPage(driver);
         driver.get("https://the-internet.herokuapp.com/login");
         loginPage.inputUsername("username").inputPassword("password").clickLoginBtn();
@@ -42,7 +40,7 @@ public class SimpleDataProvider {
 
     @Test
     public void openBrowser_(){
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         TheInternetAuthenticationPage loginPage = new TheInternetAuthenticationPage(driver);
         driver.get("https://the-internet.herokuapp.com/login");
         loginPage.inputUsername("username").inputPassword("password").clickLoginBtn();

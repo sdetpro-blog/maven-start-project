@@ -1,18 +1,16 @@
 package apilearning;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.net.URL;
-
 public class FormHandling {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             // Open url
             driver.get("https://the-internet.herokuapp.com/login");

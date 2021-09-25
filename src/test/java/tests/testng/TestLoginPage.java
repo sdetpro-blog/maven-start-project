@@ -1,6 +1,6 @@
 package tests.testng;
 
-import driver.DriverFactory;
+import driver.Driver;
 import models.pagesold.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -10,7 +10,7 @@ public class TestLoginPage {
 
     @Test
     void testLoginWithCorrectCreds() {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             driver.get("https://the-internet.herokuapp.com/login");
             LoginPage loginPage = new LoginPage(driver);
@@ -30,7 +30,7 @@ public class TestLoginPage {
     // Will be failed
     @Test
     void testLoginWithIncorrectCreds() {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
 
         try {
             driver.get("https://the-internet.herokuapp.com/login");

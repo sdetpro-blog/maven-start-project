@@ -1,11 +1,11 @@
 package components.global;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.WebDriver;
 
 public class SocialNavigation {
 
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
     }
 }

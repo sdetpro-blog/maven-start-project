@@ -1,6 +1,6 @@
 package tests.order;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ public class BuildStandardComputerTest {
 
     @Test(dataProvider = "standardCompsDataSet")
     public void testBuildingStandardComputer(ComputerDataObject computerDataObject) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
 

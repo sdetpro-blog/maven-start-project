@@ -1,6 +1,6 @@
 package apilearning;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AlertLearning {
 
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
 
         try {
             driver.get("https://the-internet.herokuapp.com/javascript_alerts");

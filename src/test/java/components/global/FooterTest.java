@@ -1,13 +1,13 @@
 package components.global;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.WebDriver;
 
 public class FooterTest {
 
     public static void main(String[] args) {
 
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
         try {
             testHomePageFooter(driver);
             testCategoryPageFooter(driver);

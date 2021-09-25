@@ -1,6 +1,6 @@
 package models.pagesold;
 
-import driver.DriverFactory;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -30,7 +30,7 @@ public class ECommerceHomPage {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = Driver.getChromeDriver();
 
         driver.get("http://demowebshop.tricentis.com/");
         ECommerceHomPage eCommerceHomPage = new ECommerceHomPage(driver);
