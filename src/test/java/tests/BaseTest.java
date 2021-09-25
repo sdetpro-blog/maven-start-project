@@ -1,6 +1,7 @@
 package tests;
 
 import driver.DriverFactory;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,6 +12,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class BaseTest {
@@ -63,6 +68,10 @@ public class BaseTest {
 
             try {
                 FileUtils.copyFile(screenShot, new File(fileLocation));
+                Path content = Paths.get(fileLocation);
+                try (InputStream is = Files.newInputStream(content)) {
+                    Allure.addAttachment(testMethod, is);
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

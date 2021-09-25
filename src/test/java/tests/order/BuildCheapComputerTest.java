@@ -1,31 +1,28 @@
 package tests.order;
 
-import driver.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import testdata.purchasing.ComputerDataObject;
 import testflows.order.computer.OrderingComputerFlow;
+import tests.BaseTest;
 import utils.data.ComputerTestDataGenerator;
 
-public class BuildCheapComputerTest {
+public class BuildCheapComputerTest extends BaseTest {
 
     @Test(dataProvider = "cheapCompsDataSet")
     public void testBuildingCheapComputer(ComputerDataObject computerDataObject) {
-        WebDriver driver = Driver.getChromeDriver();
-        try {
-            OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
+        WebDriver driver = getDriver();
+        OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
 
-            // Go to cheap computer item page
-            driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
-            orderingComputerFlow.buildCheapComputer(computerDataObject);
+        // Go to cheap computer item page
+        driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
+        orderingComputerFlow.buildCheapComputer(computerDataObject);
 
-            // Go to Shopping cart Page
-            driver.get("http://demowebshop.tricentis.com/cart");
-            orderingComputerFlow.verifyComputerAdded(computerDataObject);
-        } finally {
-            driver.quit();
-        }
+        // Go to Shopping cart Page
+        driver.get("http://demowebshop.tricentis.com/cart");
+        orderingComputerFlow.verifyComputerAdded(computerDataObject);
+
     }
 
     @DataProvider()
