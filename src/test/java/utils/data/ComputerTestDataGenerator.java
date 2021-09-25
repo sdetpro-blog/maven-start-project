@@ -1,7 +1,7 @@
 package utils.data;
 
 import com.google.gson.Gson;
-import testdata.purchasing.CheapComputer;
+import testdata.purchasing.ComputerDataObject;
 
 import java.io.Reader;
 import java.nio.file.Files;
@@ -9,8 +9,8 @@ import java.nio.file.Paths;
 
 public class ComputerTestDataGenerator {
 
-    public static CheapComputer[] getTestDataFrom(String jsonDataFileLocation) {
-        CheapComputer[] cheapComputers = new CheapComputer[]{};
+    public static ComputerDataObject[] getTestDataFrom(String jsonDataFileLocation) {
+        ComputerDataObject[] cheapComputers = new ComputerDataObject[]{};
         try {
             // create Gson instance
             Gson gson = new Gson();
@@ -20,7 +20,7 @@ public class ComputerTestDataGenerator {
             Reader reader = Files.newBufferedReader(Paths.get(currentProjectLocation + jsonDataFileLocation));
 
             // Convert to array of Computer instances
-            cheapComputers = gson.fromJson(reader, CheapComputer[].class);
+            cheapComputers = gson.fromJson(reader, ComputerDataObject[].class);
 
             reader.close();
 

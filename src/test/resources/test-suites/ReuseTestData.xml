@@ -1,9 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Test Data" verbose="1" >
+<suite name="Test Data" parallel="classes" thread-count="2">
     <test name="TestNG">
         <classes>
-            <class name="tests.purchasing.BuildCheapComputerTest_02"/>
+            <class name="tests.purchasing.BuildCheapComputerTest"/>
+            <class name="tests.purchasing.BuildStandardComputerTest"/>
         </classes>
     </test>
 </suite>

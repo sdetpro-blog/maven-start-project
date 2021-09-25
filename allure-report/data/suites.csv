@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Sep 19 17:54:28 CDT 2021","Sun Sep 19 17:54:28 CDT 2021","2","Test Data","TestNG","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer_02","testBuildingCheapComputer_02",""
-"passed","Sun Sep 19 17:54:16 CDT 2021","Sun Sep 19 17:54:23 CDT 2021","6803","Test Data","TestNG","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""
-"passed","Sun Sep 19 17:54:06 CDT 2021","Sun Sep 19 17:54:15 CDT 2021","8946","Test Data","TestNG","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""
-"passed","Sun Sep 19 17:54:23 CDT 2021","Sun Sep 19 17:54:28 CDT 2021","5328","Test Data","TestNG","tests.purchasing.BuildCheapComputerTest_02","tests.purchasing.BuildCheapComputerTest_02","testBuildingCheapComputer","testBuildingCheapComputer",""

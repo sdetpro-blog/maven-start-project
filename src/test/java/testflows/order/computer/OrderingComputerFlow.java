@@ -1,10 +1,12 @@
 package testflows.order.computer;
 
+import models.pages.ItemDetailsPage;
 import models.pages.computer.CheapComputerItemDetailsPage;
 import models.pages.cart.ShoppingCartPage;
+import models.pages.computer.StandardComputerItemDetailsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import testdata.purchasing.CheapComputer;
+import testdata.purchasing.ComputerDataObject;
 import testdata.purchasing.ComputerSpec;
 
 public class OrderingComputerFlow {
@@ -15,7 +17,7 @@ public class OrderingComputerFlow {
         this.driver = driver;
     }
 
-    public void buildCheapComputer(CheapComputer compData) {
+    public void buildCheapComputer(ComputerDataObject compData) {
         CheapComputerItemDetailsPage detailsPage = new CheapComputerItemDetailsPage(driver);
 
         // Build Comp specs
@@ -30,10 +32,27 @@ public class OrderingComputerFlow {
         } catch (Exception e) {
             throw new Error("[ERR] Item is not added after 15s!");
         }
-
     }
 
-    public void verifyCheapComputerAdded(CheapComputer simpleComputer) {
+    // TODO: Below are duplicated code and we will comeback to refactor later
+    public void buildStandardComputer(ComputerDataObject compData) {
+        StandardComputerItemDetailsPage detailsPage = new StandardComputerItemDetailsPage(driver);
+
+        // Build Comp specs
+        detailsPage.computerEssentialComp().selectProcessorType(compData.getProcessorType());
+        detailsPage.computerEssentialComp().selectRAM(compData.getRam());
+        detailsPage.computerEssentialComp().selectHDD(compData.getHdd());
+
+        // Add To cart
+        detailsPage.computerEssentialComp().clickOnAddToCartBtn();
+        try {
+            detailsPage.waitUntilItemAddedToCart();
+        } catch (Exception e) {
+            throw new Error("[ERR] Item is not added after 15s!");
+        }
+    }
+
+    public void verifyCheapComputerAdded(ComputerDataObject simpleComputer) {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
 
         // Get fixed price for this computer type

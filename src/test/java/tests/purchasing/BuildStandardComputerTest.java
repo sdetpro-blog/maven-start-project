@@ -8,17 +8,17 @@ import testdata.purchasing.ComputerDataObject;
 import testflows.order.computer.OrderingComputerFlow;
 import utils.data.ComputerTestDataGenerator;
 
-public class BuildCheapComputerTest {
+public class BuildStandardComputerTest {
 
-    @Test(dataProvider = "cheapCompsDataSet")
-    public void testBuildingCheapComputer(ComputerDataObject computerDataObject) {
+    @Test(dataProvider = "standardCompsDataSet")
+    public void testBuildingStandardComputer(ComputerDataObject computerDataObject) {
         WebDriver driver = DriverFactory.getChromeDriver();
         try {
             OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
 
             // Go to cheap computer item page
-            driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
-            orderingComputerFlow.buildCheapComputer(computerDataObject);
+            driver.get("http://demowebshop.tricentis.com/build-your-own-computer");
+            orderingComputerFlow.buildStandardComputer(computerDataObject);
 
             // Go to Shopping cart Page
             driver.get("http://demowebshop.tricentis.com/cart");
@@ -29,10 +29,10 @@ public class BuildCheapComputerTest {
     }
 
     @DataProvider()
-    public ComputerDataObject[] cheapCompsDataSet() {
+    public ComputerDataObject[] standardCompsDataSet() {
         ComputerDataObject[] computerTestData =
                 ComputerTestDataGenerator
-                        .getTestDataFrom("/src/test/java/testdata/purchasing/CheapComputerDataList.json");
+                        .getTestDataFrom("/src/test/java/testdata/purchasing/StandardComputerDataList.json");
         return computerTestData;
     }
 
