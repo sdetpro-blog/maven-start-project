@@ -3,8 +3,8 @@
 <suite name="Test Data" parallel="classes" thread-count="2">
     <test name="TestNG">
         <classes>
-            <class name="tests.purchasing.BuildCheapComputerTest"/>
-            <class name="tests.purchasing.BuildStandardComputerTest"/>
+            <class name="tests.order.BuildCheapComputerTest"/>
+            <class name="tests.order.BuildStandardComputerTest"/>
         </classes>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package tests.purchasing;
+package tests.order;
 
 import driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
@@ -8,17 +8,17 @@ import testdata.purchasing.ComputerDataObject;
 import testflows.order.computer.OrderingComputerFlow;
 import utils.data.ComputerTestDataGenerator;
 
-public class BuildStandardComputerTest {
+public class BuildCheapComputerTest {
 
-    @Test(dataProvider = "standardCompsDataSet")
-    public void testBuildingStandardComputer(ComputerDataObject computerDataObject) {
+    @Test(dataProvider = "cheapCompsDataSet")
+    public void testBuildingCheapComputer(ComputerDataObject computerDataObject) {
         WebDriver driver = DriverFactory.getChromeDriver();
         try {
             OrderingComputerFlow orderingComputerFlow = new OrderingComputerFlow(driver);
 
             // Go to cheap computer item page
-            driver.get("http://demowebshop.tricentis.com/build-your-own-computer");
-            orderingComputerFlow.buildStandardComputer(computerDataObject);
+            driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
+            orderingComputerFlow.buildCheapComputer(computerDataObject);
 
             // Go to Shopping cart Page
             driver.get("http://demowebshop.tricentis.com/cart");
@@ -29,10 +29,10 @@ public class BuildStandardComputerTest {
     }
 
     @DataProvider()
-    public ComputerDataObject[] standardCompsDataSet() {
+    public ComputerDataObject[] cheapCompsDataSet() {
         ComputerDataObject[] computerTestData =
                 ComputerTestDataGenerator
-                        .getTestDataFrom("/src/test/java/testdata/purchasing/StandardComputerDataList.json");
+                        .getTestDataFrom("/src/test/java/testdata/purchasing/CheapComputerDataList.json");
         return computerTestData;
     }
 
