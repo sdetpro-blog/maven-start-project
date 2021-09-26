@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression">
+    <test name="Chrome - Computer Order flows" parallel="classes" thread-count="2">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.order.BuildCheapComputerTest"/>
+            <class name="tests.order.BuildStandardComputerTest"/>
+        </classes>
+    </test>
+    <test name="FF - Computer Order flows" parallel="classes" thread-count="2">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.order.BuildCheapComputerTest"/>
+            <class name="tests.order.BuildStandardComputerTest"/>
+        </classes>
+    </test>
+</suite>
