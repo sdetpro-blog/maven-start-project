@@ -13,7 +13,7 @@ public class DriverFactory {
         return webDriver;
     }
 
-    WebDriver getDriver(String browserName) {
+    public WebDriver getDriver(String browserName) {
         if(webDriver == null) {
             webDriver = Driver.getDriver(browserName);
         }

@@ -43,6 +43,10 @@ public class BaseTest {
         return driverThread.get().getDriver();
     }
 
+    public static WebDriver getDriver(String browserName){
+        return driverThread.get().getDriver(browserName);
+    }
+
     @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestResult result) {
         getDriver().manage().deleteAllCookies();

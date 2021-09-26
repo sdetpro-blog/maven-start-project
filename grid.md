@@ -1,6 +1,15 @@
+# What is it
+. Generally speaking, cross-browser testing is technique that you need to handle to 
+    have your test methods able to run on different browser types, environments in parallel.
+
+. You CAN'T combine dataPovider and Parameters annotation from TestNG same time!
+
+. You need to design your test suite to have important test scripts to run cross-browser testing.
+    It's not necessary to have all test methods to run cross-browser testing.
+    
 ## Command to start Hub
 ```
-
+java -jar /path/to/selenium-server-file -role hub
 ```
 
 ## Command to start Node
