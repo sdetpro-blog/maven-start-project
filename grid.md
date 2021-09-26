@@ -7,6 +7,9 @@
 . You need to design your test suite to have important test scripts to run cross-browser testing.
     It's not necessary to have all test methods to run cross-browser testing.
     
+* Select main browser: Chrome
+* VERY IMPORTANT scenarios: cross-browser testing
+    
 ## Command to start Hub
 ```
 java -jar /path/to/selenium-server-file -role hub
@@ -20,6 +23,9 @@ This node will register:
 
 Note: IF you are on Windows OS, please remove part related to safari and add for Edge
 ```
+java -jar -Dwebdriver.<type>.<name>s path/to/selenium/server.jsr -role node -nodeCOnfig /path/to/nodeConfig.json
 java -jar -Dwebdriver.gecko.driver=/Users/tuhuynh/SOURCE_CODE/maven-start-project/selenium-grid/geckodriver -Dwebdriver.chrome.driver=/Users/tuhuynh/SOURCE_CODE/maven-start-project/selenium-grid/chromedriver /Users/tuhuynh/SOURCE_CODE/maven-start-project/selenium-grid/selenium-server-standalone-3.141.59.jar -role node -nodeConfig /Users/tuhuynh/SOURCE_CODE/maven-start-project/selenium-grid/node_config.json
 
 ```
+
+NOTE: on Windows need to specify extension like gecko.exe, chrome.exe

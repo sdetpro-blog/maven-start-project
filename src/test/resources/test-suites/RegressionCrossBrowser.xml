@@ -10,7 +10,7 @@
     <test name="FF - Computer Order flows" parallel="classes" thread-count="2">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="tests.order.BuyingCompSampleCrossBrowser"/>
+            <class name="tests.order.BuildCheapComputerTest"/>
         </classes>
     </test>
 </suite>

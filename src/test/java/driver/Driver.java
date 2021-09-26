@@ -32,18 +32,18 @@ public class Driver {
         return driver;
     }
 
-    public static WebDriver getDriver(String browserName) {
+    public static RemoteWebDriver getDriver(String browserName) {
 
         RemoteWebDriver remoteWebDriver;
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setPlatform(Platform.ANY);
-        if (browserName.equalsIgnoreCase("chrome"))
-            desiredCapabilities.setBrowserName("chrome");
+        if (browserName.equalsIgnoreCase("safari"))
+            desiredCapabilities.setBrowserName("safari");
         else if (browserName.equalsIgnoreCase("firefox"))
             desiredCapabilities.setBrowserName("firefox");
         else
-            desiredCapabilities.setBrowserName("safari");
+            desiredCapabilities.setBrowserName("chrome");
 
         try {
             remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
