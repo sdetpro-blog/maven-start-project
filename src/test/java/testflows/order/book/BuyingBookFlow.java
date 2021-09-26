@@ -1,4 +1,4 @@
 package testflows.order.book;
 
-public class OrderingBookFlow {
+public class BuyingBookFlow {
 }

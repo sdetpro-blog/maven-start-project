@@ -1,6 +1,5 @@
 package testflows.order.computer;
 
-import models.pages.ItemDetailsPage;
 import models.pages.computer.CheapComputerItemDetailsPage;
 import models.pages.cart.ShoppingCartPage;
 import models.pages.computer.StandardComputerItemDetailsPage;
@@ -9,11 +8,11 @@ import org.testng.Assert;
 import testdata.purchasing.ComputerDataObject;
 import testdata.purchasing.ComputerSpec;
 
-public class OrderingComputerFlow {
+public class BuyingComputerFlow {
 
     private final WebDriver driver;
 
-    public OrderingComputerFlow(WebDriver driver) {
+    public BuyingComputerFlow(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -55,7 +54,7 @@ public class OrderingComputerFlow {
     public void verifyComputerAdded(ComputerDataObject simpleComputer) {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
 
-        // Get fixed price for this computer type
+        // TODO: need to handle this price
         final double fixedPrice = 800.0;
 
         // Get additional fee
