@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import testdata.url.URL;
 
 import java.io.File;
 import java.io.InputStream;
@@ -80,5 +81,27 @@ public class BaseTest {
                 e.printStackTrace();
             }
         }
+    }
+
+    protected void goTo(URL pathEnum){
+
+        final String baseUrlString = "baseUrl";
+        // Get String path from enum value
+        String path = pathEnum.getPath();
+
+        // Get current base url
+        String baseUrl;
+        baseUrl = System.getProperty(baseUrlString);
+        if(baseUrl == null){
+            baseUrl = System.getenv(baseUrlString);
+        }
+
+        if (baseUrl == null){
+            throw new IllegalArgumentException("[ERR] Please supply the baseURL for testing!");
+        }
+
+        // Get final url
+        String url = baseUrl + path;
+        driverThread.get().getDriver().get(url);
     }
 }

@@ -1,5 +1,6 @@
 package models.components.product;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 public class CheapComputerEssentialComponent extends ComputerEssentialComponent {
@@ -11,10 +12,12 @@ public class CheapComputerEssentialComponent extends ComputerEssentialComponent 
         this.driver = driver;
     }
 
+    @Step("Select Processor type as {type}")
     public void selectProcessorType(String type) {
         selectCompSpecOption(type);
     }
 
+    @Step("Select ram capability as {type}")
     public void selectRAM(String type) {
         selectCompSpecOption(type);
     }

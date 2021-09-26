@@ -1,26 +1,29 @@
 package tests.order;
 
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import testdata.purchasing.ComputerDataObject;
+import testdata.url.URL;
 import testflows.order.computer.BuyingComputerFlow;
 import tests.BaseTest;
 import utils.data.ComputerTestDataGenerator;
 
 public class BuildCheapComputerTest extends BaseTest {
 
-    @Test(dataProvider = "cheapCompsDataSet")
+    @Test(dataProvider = "cheapCompsDataSet", description = "Buying a cheap computer")
+    @Description(value = "Using a set of data with different computer specs and check total price in cart")
     public void testBuildingCheapComputer(ComputerDataObject computerDataObject) {
         WebDriver driver = getDriver();
         BuyingComputerFlow orderingComputerFlow = new BuyingComputerFlow(driver);
 
         // Go to cheap computer item page
-        driver.get("http://demowebshop.tricentis.com/build-your-cheap-own-computer");
+        goTo(URL.CHEAP_COMP_DETAILS);
         orderingComputerFlow.buildCheapComputer(computerDataObject);
 
         // Go to Shopping cart Page
-        driver.get("http://demowebshop.tricentis.com/cart");
+        goTo(URL.CART);
         orderingComputerFlow.verifyComputerAdded(computerDataObject);
 
     }
