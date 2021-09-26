@@ -1,5 +1,6 @@
 package models.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,6 +24,7 @@ public class ItemDetailsPage {
         return driver.findElement(barNotificationHyperlinkSel).getAttribute("href");
     }
 
+    @Step("Wait for item added to cart")
     public boolean isMyItemAddedToCart(){
         WebDriverWait wait = new WebDriverWait(driver, 15);
         try {
@@ -35,6 +37,7 @@ public class ItemDetailsPage {
         return true;
     }
 
+    @Step("Wait for item added to cart")
     public void waitUntilItemAddedToCart(){
         isMyItemAddedToCart();
     }

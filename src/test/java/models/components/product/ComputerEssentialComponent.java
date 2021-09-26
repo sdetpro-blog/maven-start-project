@@ -33,6 +33,7 @@ public abstract class ComputerEssentialComponent {
         driver.findElement(optionSel).click();
     }
 
+    @Step("Click on [Add to cart]")
     public void clickOnAddToCartBtn(){
         driver.findElement(addToCartBtnSel).click();
     }
