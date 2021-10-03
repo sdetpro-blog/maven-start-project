@@ -1,5 +1,6 @@
 package models.components.product;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import testdata.purchasing.ComputerSpec;
@@ -16,6 +17,7 @@ public abstract class ComputerEssentialComponent {
     public abstract void selectProcessorType(String type);
     public abstract void selectRAM(String type);
 
+    @Step("Select HDD with value {type}")
     public void selectHDD(String type) {
         selectCompSpecOption(type);
     }
@@ -31,6 +33,7 @@ public abstract class ComputerEssentialComponent {
         driver.findElement(optionSel).click();
     }
 
+    @Step("Click on [Add to cart]")
     public void clickOnAddToCartBtn(){
         driver.findElement(addToCartBtnSel).click();
     }
