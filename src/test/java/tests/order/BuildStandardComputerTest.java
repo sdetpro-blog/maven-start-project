@@ -1,6 +1,7 @@
 package tests.order;
 
 import io.qameta.allure.Description;
+import models.components.product.StandardEssentialComponent;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,11 +17,13 @@ public class BuildStandardComputerTest extends BaseTest {
     @Description(value = "Using a set of data with different computer specs and check total price in cart")
     public void testBuildingStandardComputer(ComputerDataObject computerDataObject) {
         WebDriver driver = getDriver();
-        BuyingComputerFlow orderingComputerFlow = new BuyingComputerFlow(driver);
+//        StandardEssentialComponent standardEssentialComponent = new StandardEssentialComponent(driver);
+        BuyingComputerFlow<StandardEssentialComponent> orderingComputerFlow = new BuyingComputerFlow<>(driver);
 
         // Go to cheap computer item page
         goTo(URL.STANDARD_COMP_DETAILS);
-        orderingComputerFlow.buildStandardComputer(computerDataObject);
+        orderingComputerFlow.withComputerEssentialComp(StandardEssentialComponent.class);
+        orderingComputerFlow.buildComputerGeneric(computerDataObject);
 
         // Go to Shopping cart Page
         goTo(URL.CART);

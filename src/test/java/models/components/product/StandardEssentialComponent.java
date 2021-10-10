@@ -15,10 +15,12 @@ public class StandardEssentialComponent extends ComputerEssentialComponent {
     private final By productAttributeSel = By.xpath("//select[contains(@id, 'product_attribute')]");
     private static final int PROCESSOR_DROPDOWN_INDEX = 0;
     private static final int RAM_DROPDOWN_INDEX = 1;
+    private WebElement element;
 
     public StandardEssentialComponent(WebDriver driver) {
         super(driver);
         this.driver = driver;
+        element = driver.findElement(productAttributeSel);
     }
 
     @Step("Select Processor type as {type}")

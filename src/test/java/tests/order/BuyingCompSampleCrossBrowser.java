@@ -1,7 +1,6 @@
 package tests.order;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testdata.purchasing.ComputerDataObject;
@@ -27,7 +26,7 @@ public class BuyingCompSampleCrossBrowser extends BaseTest {
 
         // Go to cheap computer item page
         goTo(URL.CHEAP_COMP_DETAILS);
-        orderingComputerFlow.buildCheapComputer(computerDataObject);
+        orderingComputerFlow.buildComputerGeneric(computerDataObject);
 
         // Go to Shopping cart Page
         goTo(URL.CART);

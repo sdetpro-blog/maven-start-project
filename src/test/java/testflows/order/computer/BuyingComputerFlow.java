@@ -1,5 +1,7 @@
 package testflows.order.computer;
 
+import models.components.product.ComputerEssentialComponent;
+import models.pages.ItemDetailsPage;
 import models.pages.computer.CheapComputerItemDetailsPage;
 import models.pages.cart.ShoppingCartPage;
 import models.pages.computer.StandardComputerItemDetailsPage;
@@ -8,24 +10,62 @@ import org.testng.Assert;
 import testdata.purchasing.ComputerDataObject;
 import testdata.purchasing.ComputerSpec;
 
-public class BuyingComputerFlow {
+import java.lang.reflect.InvocationTargetException;
+
+public class BuyingComputerFlow<T extends ComputerEssentialComponent> {
 
     private final WebDriver driver;
+    private T essentialCompGeneric;
+    ComputerEssentialComponent essentialComponentNormal;
 
     public BuyingComputerFlow(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void buildCheapComputer(ComputerDataObject compData) {
-        CheapComputerItemDetailsPage detailsPage = new CheapComputerItemDetailsPage(driver);
+//    public BuyingComputerFlow(WebDriver driver, ComputerEssentialComponent essentialComponentNormal) {
+//        this.driver = driver;
+//        this.essentialComponentNormal = essentialComponentNormal;
+//    }
+
+    public BuyingComputerFlow<T> withComputerEssentialComp(Class<T> computerType) {
+        try {
+            essentialCompGeneric = computerType.getConstructor(WebDriver.class).newInstance(driver);
+        } catch (InstantiationException | InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
+            throw new IllegalArgumentException(e.getMessage());
+        }
+        return this;
+    }
+
+    public void buildComputerNormal(ComputerDataObject compData) {
+        ItemDetailsPage detailsPage = new ItemDetailsPage(driver);
 
         // Build Comp specs
-        detailsPage.computerEssentialComp().selectProcessorType(compData.getProcessorType());
-        detailsPage.computerEssentialComp().selectRAM(compData.getRam());
-        detailsPage.computerEssentialComp().selectHDD(compData.getHdd());
+        essentialComponentNormal.selectProcessorType(compData.getProcessorType());
+        essentialComponentNormal.selectRAM(compData.getRam());
+        essentialComponentNormal.selectHDD(compData.getHdd());
 
         // Add To cart
-        detailsPage.computerEssentialComp().clickOnAddToCartBtn();
+        essentialComponentNormal.clickOnAddToCartBtn();
+        try {
+            detailsPage.waitUntilItemAddedToCart();
+        } catch (Exception e) {
+            throw new Error("[ERR] Item is not added after 15s!");
+        }
+    }
+
+    public void buildComputerGeneric(ComputerDataObject compData) {
+        if (essentialCompGeneric == null) {
+            throw new RuntimeException("Please call withComputerType to specify computer type!");
+        }
+        ItemDetailsPage detailsPage = new ItemDetailsPage(driver);
+
+        // Build Comp specs
+        essentialCompGeneric.selectProcessorType(compData.getProcessorType());
+        essentialCompGeneric.selectRAM(compData.getRam());
+        essentialCompGeneric.selectHDD(compData.getHdd());
+
+        // Add To cart
+        essentialCompGeneric.clickOnAddToCartBtn();
         try {
             detailsPage.waitUntilItemAddedToCart();
         } catch (Exception e) {
